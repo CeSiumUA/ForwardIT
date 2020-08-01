@@ -1,0 +1,30 @@
+﻿<Window x:Class="ForwardIT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ForwardIT"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="296" Width="800" Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,0">
+        <DockPanel LastChildFill="False" Margin="0,0,526,0">
+            <Label Content="Номер телефона:" DockPanel.Dock="Top"/>
+            <TextBox x:Name="phoneBox" Text="{Binding PhoneNumber}" DockPanel.Dock="Top" TextChanged="TextBox_TextChanged" Height="23"></TextBox>
+            <Label Content="Код:" DockPanel.Dock="Top"/>
+            <TextBox x:Name="codeBox" DockPanel.Dock="Top" Text="{Binding Code}" Height="23"></TextBox>
+            <Button Command="{Binding AuthCommand}" DockPanel.Dock="Top" Content="Вход" Width="Auto"/>
+            <Label Content="{Binding TelegramUser.FirstName}" DockPanel.Dock="Top"/>
+        </DockPanel>
+        <DockPanel LastChildFill="False" Margin="274,0,0,0">
+            <Label DockPanel.Dock="Top" Content="Откуда парсить:"/>
+            <ComboBox IsEditable="True" SelectedItem="{Binding SelectedChannel}" IsTextSearchEnabled="True" IsTextSearchCaseSensitive="False" ItemsSource="{Binding Channels}" DisplayMemberPath="Title" x:Name="ChatsSelector" DockPanel.Dock="Top"></ComboBox>
+            <Label Content="Перечень аккаунтов (@xxxx), через запятую" DockPanel.Dock="Top"/>
+            <TextBox VerticalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding SelectedUsers}" DockPanel.Dock="Top"></TextBox>
+            <Label DockPanel.Dock="Top" Content="Куда парсить:"/>
+            <ComboBox IsEditable="True" SelectedItem="{Binding SelectedTargetChannel}" IsTextSearchEnabled="True" IsTextSearchCaseSensitive="False" ItemsSource="{Binding Channels}" DisplayMemberPath="Title" x:Name="TargetSelector" DockPanel.Dock="Top"></ComboBox>
+            <Button Command="{Binding ListenerCommand}" DockPanel.Dock="Top" Content="Начать форвардинг" Width="Auto"/>
+            <Label Content="{Binding ParsingStatus}" DockPanel.Dock="Top"/>
+            <Label Content="{Binding ForwardStatus}" DockPanel.Dock="Top"/>
+        </DockPanel>
+    </Grid>
+</Window>

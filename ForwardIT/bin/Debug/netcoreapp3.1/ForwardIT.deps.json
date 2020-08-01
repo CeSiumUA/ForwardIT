@@ -1,0 +1,61 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ForwardIT/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "TLSharp": "0.1.0.555"
+        },
+        "runtime": {
+          "ForwardIT.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "TLSharp/0.1.0.555": {
+        "runtime": {
+          "lib/net46/TLSharp.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/net46/TeleSharp.TL.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ForwardIT/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "TLSharp/0.1.0.555": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dGlkwG/LlR8TsCZdG7wea2bWrTlfNOhhTOsS6w319+wc0fZucRaCDFxNS25uVEoS7/6J/S8kTR84ICg+EUPODw==",
+      "path": "tlsharp/0.1.0.555",
+      "hashPath": "tlsharp.0.1.0.555.nupkg.sha512"
+    }
+  }
+}
